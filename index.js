@@ -12,4 +12,26 @@ function changePage(page) {
     }  
     homePage.style.display = "none";
 
-}
+};
+
+function logIn() {
+    var input = document.getElementById("input").value;
+
+    for (x in employee) {
+        if (input == employee[x].id) {
+            console.log("sucess");
+            break;
+
+        } else {
+            console.log("you flopped")
+        }
+    }
+};
+
+function logOut() {
+
+};
+
+function checkId() {
+
+};

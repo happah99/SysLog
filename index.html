@@ -19,11 +19,11 @@
         <h4 class="text-center" style="margin-bottom: 1em; color: silver;">Benz Victoria 1893</h4>
         <div class="row">
             <div class="col">
-                <button type="button" class="btn btn-primary btn-lg" style="width: 100%;" onClick="changePage('staff')">Staff</button>
+                <button type="button" class="btn btn-primary btn-lg" style="width: 100%;" onclick="changePage('staff')">Staff</button>
             </div>
 
             <div class="col">
-                <button type="button" class="btn btn-primary btn-lg" style="width: 100%" onClick="changePage('guest')">Guest</button>
+                <button type="button" class="btn btn-primary btn-lg" style="width: 100%" onclick="changePage('guest')">Guest</button>
             </div>
         </div>
     </div>
@@ -35,11 +35,11 @@
 
         <div class="mb-3">
           <label class="form-label">Officer ID Number</label>
-          <input type="password" class="form-control">
+          <input type="password" class="form-control" id="input">
         </div>
 
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Login</button>
-        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Logout</button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="logIn()">Login</button>
+        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="logOut()">Logout</button>
       
       </form>
 
