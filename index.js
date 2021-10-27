@@ -1,10 +1,15 @@
+var homePage = document.getElementById("home-page");
+var staffPage = document.getElementById("staff");
+var guestPage = document.getElementById("guest")
+
+
 function changePage(page) {
 
     if (page === "staff"){
-        document.getElementById("staff").style.display = "block";
+        staffPage.style.display = "block";
     } else if (page ==="guest"){
-        document.getElementById("guest").style.display = "block";
+        guestPage.style.display = "block";
     }  
-    document.getElementById("home-page").style.display = "none";
+    homePage.style.display = "none";
 
 }
