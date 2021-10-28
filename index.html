@@ -15,6 +15,8 @@
 
     <div class="container position-absolute top-50 start-50 translate-middle" style="width: 50%; display: block" id="home-page">
         
+        <img src="apple.jpg" class="mx-auto d-block" style="border-radius: 35%; border: 4px solid black; margin-bottom: 2em; height: 10em;">
+        
         <h2 class="text-center" style="font-weight: bold;">Shmuel Industries®</h2>        
         <h4 class="text-center" style="margin-bottom: 1em; color: silver;">Benz Victoria 1893</h4>
         <div class="row">
@@ -38,8 +40,8 @@
           <input type="password" class="form-control" id="input">
         </div>
 
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="logIn()">Login</button>
-        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="logOut()">Logout</button>
+        <button type="button" class="btn btn-primary" onclick="logIn()">Login</button>
+        <button type="button" class="btn btn-danger" onclick="logOut()">Logout</button>
       
       </form>
 
@@ -50,23 +52,22 @@
 
     </div>
 
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            
-            <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+            <h5 class="modal-title" id="loginModalLabel">Welcome!</h5>
+          </div>
+          <div class="modal-body text-center">
+
+            <h6>Your sign in time has been logged at: </h6>
+            <br>
+            <h5 id="time" style="font-style: italic;"></h5>
+            <h7 style="color: silver;">Remember to log out once done for the day.</h7>
 
           </div>
-          <div class="modal-body">
-          
-            ...
-          
-          </div>
           <div class="modal-footer">
-            
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Done</button>
           </div>
         </div>
       </div>
