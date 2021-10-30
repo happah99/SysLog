@@ -35,17 +35,18 @@
 
       <div class="card-header">
         <button type="button" class="btn-close" aria-label="Close" onclick="changePage('home')"></button>
+        <h3 class="text-center" style="font-weight: bold; margin-bottom: 1em;">Staff login</h3>
       </div>
 
       <form style="margin: 1em;">
 
         <div class="mb-3">
-          <label class="form-label">Officer ID Number</label>
+          <label class="form-label">Officer ID Number:</label>
           <input type="password" class="form-control" id="input" placeholder="Enter your ID number..." style="color: darkgray;">
         </div>
 
         <button type="button" class="btn btn-primary" onclick="logIn()">Login</button>
-        <button type="button" class="btn btn-danger" onclick="logOut()">Logout</button>
+        <!-- <button type="button" class="btn btn-danger" onclick="logOut()">Logout</button> -->
 
       </form>
 
@@ -55,9 +56,42 @@
       Wrong ID number — please try again!
     </div>
 
-    <div class="container position-absolute top-50 start-50 translate-middle" style="width: 50%; display: none" id="guest">
+    <div class="card bg-light position-absolute top-50 start-50 translate-middle" style="width: 50%; display: none" id="guest">
+
+      <div class="card-header">
+        <button type="button" class="btn-close" aria-label="Close" onclick="changePage('home')"></button>
+        <h3 class="text-center" style="font-weight: bold; margin-bottom: 1em;">Guest login</h3>
+      </div>
+
+      <form style="margin: 1em;">
+
+        <div class="mb-3">
+
+          <label class="form-label">First name:</label>
+          <input type="text" class="form-control" id="firstName" placeholder="Enter your first name..." style="color: darkgray;">
+
+          <label class="form-label" style="margin-top: 1em;">Last name:</label>
+          <input type="text" class="form-control" id="lastName" placeholder="Enter your last name..." style="color: darkgray;">
+
+          <label class="form-label" style="margin-top: 1em;">Vehicle registration:</label>
+          <input type="text" class="form-control" id="vehicleReg" placeholder="Enter your vehicle registration..." style="color: darkgray;">
+
+          <label class="form-label" style="margin-top: 1em;">Here to see?</label>
+          <div class="input-group mb-3">
+            <select class="form-select" id="inputGroupSelect03" aria-label="Example select with button addon">
+              <option selected>Meeting an employee</option>
+              <option value="1">General repairs</option>
+              <option value="2">Routine inspection</option>
+              <option value="3">Food delivery</option>
+            </select>
+          </div>
+
+        </div>
+
+      </form>
 
     </div>
+
 
     <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
