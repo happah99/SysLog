@@ -4,16 +4,24 @@ var guestPage = document.getElementById("guest");
 var loginModal = document.getElementById("loginModal");
 var loginModalLabel = document.getElementById("loginModalLabel");
 var time = document.getElementById("time");
+var warning = document.getElementById("warning");
 
 function changePage(page) {
 
     if (page === "staff"){
         staffPage.style.display = "block";
+        homePage.style.display = "none";
 
     } else if (page ==="guest"){
         guestPage.style.display = "block";
-    }  
-    homePage.style.display = "none";
+        homePage.style.display = "none";
+    
+    } else if (page ==="home") {
+        homePage.style.display = "block";
+        guestPage.style.display = "none";
+        staffPage.style.display = "none";
+        warning.style.display = "none";
+    }
 
 };
 
@@ -33,11 +41,13 @@ function logIn() {
             };
 
             loginModal.show();
+            warning.style.display = "none";
+
             break;
 
         } else {
             console.log("Access denied.");
-
+            warning.style.display = "block";
         };
     };
 };

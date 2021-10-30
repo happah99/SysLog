@@ -31,22 +31,29 @@
     </div>
 
 
-    <div class="container position-absolute top-50 start-50 translate-middle" style="width: 30%; display: none" id="staff">
+    <div class="card bg-light position-absolute top-50 start-50 translate-middle" style="width: 50%; display: none" id="staff">
 
-      <form>
+      <div class="card-header">
+        <button type="button" class="btn-close" aria-label="Close" onclick="changePage('home')"></button>
+      </div>
+
+      <form style="margin: 1em;">
 
         <div class="mb-3">
           <label class="form-label">Officer ID Number</label>
-          <input type="password" class="form-control" id="input">
+          <input type="password" class="form-control" id="input" placeholder="Enter your ID number..." style="color: darkgray;">
         </div>
 
         <button type="button" class="btn btn-primary" onclick="logIn()">Login</button>
         <button type="button" class="btn btn-danger" onclick="logOut()">Logout</button>
-      
+
       </form>
 
-    </div>  
-
+    </div> 
+    
+    <div id="warning" class="alert alert-danger mx-auto" role="alert" style="width: 50%; margin-top: 2em; display: none;">
+      Wrong ID number — please try again!
+    </div>
 
     <div class="container position-absolute top-50 start-50 translate-middle" style="width: 50%; display: none" id="guest">
 
